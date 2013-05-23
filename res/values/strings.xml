@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">QuickMessage</string>
+    <string name="action_settings">Settings</string>
+    <string name="add_template_button">+</string>
+
+    <!-- Message template details activity -->
+    <string name="save_button">Save</string>
+    <string name="add_contact_button">Add</string>
+    <string name="message_subject_hint">Message Template Name</string>
+    <string name="message_body_hint">Message Template Body</string>
+
+    
+    <!-- Detail view activity -->
+    <string name="title_activity_detail_view">DetailViewActivity</string>
+
+</resources>

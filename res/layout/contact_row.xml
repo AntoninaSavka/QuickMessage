@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+        
+    <ImageView
+        android:id="@+id/contact_picture"
+        android:layout_width="@dimen/contact_picture_size"
+        android:layout_height="@dimen/contact_picture_size"
+        android:layout_toRightOf="@+id/contact_remove_checkBox" />
+
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/contact_picture"
+        android:padding="3sp"
+        android:layout_marginLeft="10sp"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/contact_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/contact_picture"
+        android:layout_alignLeft="@+id/contact_name"
+        android:padding="3sp"
+        android:textColor="#737373"
+        android:textSize="12sp" />
+
+    <CheckBox
+        android:id="@+id/contact_remove_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/contact_picture"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="14dp" />
+
+</RelativeLayout>

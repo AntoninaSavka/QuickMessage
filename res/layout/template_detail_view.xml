@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".DetailViewActivity" >
+
+    <EditText
+        android:id="@+id/message_detail_subject_edit"
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/message_detail_body"
+        android:layout_alignRight="@+id/message_detail_body"
+        android:ems="10"
+        android:hint="@string/message_subject_hint" />
+
+    <ListView
+        android:id="@+id/message_detail_contact_list"
+        style="@style/AppTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/detail_save_button"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/message_detail_body" 
+        android:choiceMode="multipleChoice">
+    </ListView>
+
+    <EditText
+        android:id="@+id/message_detail_body"
+        style="@style/AppTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/message_detail_contact_list"
+        android:layout_below="@+id/message_detail_subject_edit"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="@string/message_body_hint"
+        android:inputType="textMultiLine"
+        android:maxLines="6" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/detail_save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/message_detail_contact_list"
+        android:text="@string/save_button"
+        android:onClick="onSaveChanges" />
+
+    <Button
+        android:id="@+id/detail_add_contact_button"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/detail_save_button"
+        android:layout_alignBottom="@+id/detail_save_button"
+        android:layout_alignLeft="@+id/message_detail_contact_list"
+        android:text="@string/add_contact_button"
+        android:onClick="onAddContact" />
+
+</RelativeLayout>
